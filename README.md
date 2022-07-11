@@ -2,7 +2,6 @@
 ## Table of Contents
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
-3. [Installation](#installation)
 ### General Info
 
 The application is a small searching tool application.
@@ -22,7 +21,3 @@ A list of technologies used within the project:
 * Visual Studio 2022
 * Framework: .NET 6.0
 * Project Template: ASP.NET Core Web App (Model-View-Controller)
-
-## Installation
-***
-$ git clone https://github.com/acosta0111/WebAppMVC
