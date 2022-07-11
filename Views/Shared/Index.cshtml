@@ -1,0 +1,37 @@
+﻿@model Bitcoin
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <input type="button" value="Get Available Sources" id="btnGet" />
+</div>
+ <div>
+    <ul id="sources" />
+  </div>
+        
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        var uri = 'api/Values';
+
+$(function() {
+    $("#btnGet").click(function() {
+        $.getJSON(uri)
+            .done(function(data) {
+                $.each(data, function(key, item) {
+                    $('<li>', { text: formatItem(item) }).appendTo($('#sources'));
+                });
+            });
+    });
+});
+
+    function formatItem(item) {
+      return item.id + item.title + ': $' + item.endpoint;
+    }
+ </script>
+       
+   
+
+
